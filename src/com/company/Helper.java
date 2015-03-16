@@ -36,14 +36,14 @@ public class Helper {
         int i = 0;
         int j = 0;
         int r = 0;
-        int p = 0;
+        float p = 0;
 
         ArrayList<Tiles> listOfFreeTiles;
 
         countFreeTiles(tile);
 
-        r = (int) Math.random()*listOfFreeTiles.size()+1;
-        p = (int) Math.random();
+        r = (int) (Math.random()*listOfFreeTiles.size()+1);
+        p = (float) Math.random();
         if (p<0.1) {
             listOfFreeTiles.get(r).setValue(4);
         } else {
