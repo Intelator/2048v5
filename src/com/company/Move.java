@@ -4,7 +4,7 @@ package com.company;
  * Created by User on 16.03.2015.
  */
 public class Move {
-    public  Tiles[][] toTheLeft (Tiles[][] tile) {
+    public  static Tiles[][] toTheLeft (Tiles[][] tile) {
         int i = 1;
         int j = 0;
         int k = 0;
@@ -34,7 +34,7 @@ public class Move {
         return tile;
     }
 
-    public  Tiles[][] toTheRight (Tiles[][] tile) {
+    public  static Tiles[][] toTheRight (Tiles[][] tile) {
         int i = 2;
         int j = 0;
         int k = 3;
@@ -64,7 +64,7 @@ public class Move {
         return tile;
     }
 
-    public  Tiles[][] toTheUp (Tiles[][] tile) {
+    public  static Tiles[][] toTheUp (Tiles[][] tile) {
         int i = 0;
         int j = 1;
         int k = 0;
@@ -94,7 +94,7 @@ public class Move {
         return tile;
     }
 
-    public  Tiles[][] toTheDown (Tiles[][] tile) {
+    public  static Tiles[][] toTheDown (Tiles[][] tile) {
         int i = 0;
         int j = 2;
         int k = 3;

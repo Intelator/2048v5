@@ -22,7 +22,7 @@ public class Game {
         isMovesPossible = possibility;
     }
 
-    public Tiles[][] createNewField (Tiles[][] tile) {
+    public void createNewField (Tiles[][] tile) {
         int i = 0;
         int j = 0;
         while (i<4) {
@@ -35,6 +35,7 @@ public class Game {
             tile[i][j].setX(i);
             i++;
         }
+
     }
 
     public boolean checkPossibility (Tiles[][] tile) {

@@ -54,7 +54,6 @@ public class Helper {
     //Ожидаем пользовательский ввод
     public String waitForUserInput () {
         String inputLine = null;
-
         try {
             BufferedReader is = new BufferedReader (new InputStreamReader(System.in));
             inputLine = is.readLine();
