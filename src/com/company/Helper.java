@@ -52,9 +52,9 @@ public class Helper {
     }
 
     //Ожидаем пользовательский ввод
-    public String waitForUserInput (String prompt) {
+    public String waitForUserInput () {
         String inputLine = null;
-        System.out.print(prompt + " ");
+
         try {
             BufferedReader is = new BufferedReader (new InputStreamReader(System.in));
             inputLine = is.readLine();
