@@ -93,24 +93,24 @@ public class Game {
     public Tiles[][] findMotion (Tiles[][] tile) {
         Helper caddy;
 
-        if ((caddy.waitForUserInput() != "a") & (caddy.waitForUserInput() != "s") &
-                (caddy.waitForUserInput() != "d") & (caddy.waitForUserInput() != "w")) {
+        if ((caddy.waitForUserInput().equals("a") == false) & (caddy.waitForUserInput().equals("s") == false) &
+                (caddy.waitForUserInput().equals("d") == false) & (caddy.waitForUserInput().equals("w")) == false) {
             System.out.println("Use keys a, s, d, or w!");
         }
 
-        if (caddy.waitForUserInput() == "a") {
+        if (caddy.waitForUserInput().equals("a") == true) {
             Move.toTheLeft(tile);
         }
 
-        if (caddy.waitForUserInput() == "s") {
+        if (caddy.waitForUserInput().equals("s") == true) {
             Move.toTheDown(tile);
         }
 
-        if (caddy.waitForUserInput() == "d") {
+        if (caddy.waitForUserInput().equals("d") == true) {
             Move.toTheRight(tile);
         }
 
-        if (caddy.waitForUserInput() == "w") {
+        if (caddy.waitForUserInput().equals("s") == true) {
             Move.toTheUp(tile);
         }
 
