@@ -17,6 +17,8 @@ public class Main {
 
         //Заполняем поле нулями
         play.createNewField(tile);
+        caddy.createRandomTile(tile);
+        play.showTiles(tile);
 
         //Начинаем игру
         do {
@@ -30,6 +32,7 @@ public class Main {
             play.findMotion(tile);
 
             //Выводим поле на экран
+            play.showTiles(tile);
         } while (play.getIsMovesPossible() == true);
     }
 }

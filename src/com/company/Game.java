@@ -97,32 +97,45 @@ public class Game {
     //Определяем движение
     public Tiles[][] findMotion (Tiles[][] tile) {
         String userInput = Main.caddy.waitForUserInput();
-        if ((userInput.equals('a') == false) | (userInput.equals('s') == false) |
-                (userInput.equals('d') == false) | (userInput.equals('w')) == false) {
+        if (!((userInput.equals("a")) || (userInput.equals("s")) ||
+                (userInput.equals("d")) || (userInput.equals("w")))) {
             System.out.println("Use keys a, s, d, or w!");
         }
 
-        if (userInput.equals('a') == true) {
+        userInputWay(tile, userInput);
+
+        return tile;
+    }
+
+    private void userInputWay(Tiles[][] tile, String userInput) {
+        if (userInput.equals("a")) {
             Move.toTheLeft(tile);
             System.out.println("Moved to the left");
         }
 
-        if (userInput.equals('s') == true) {
+        if (userInput.equals("s")) {
             Move.toTheDown(tile);
             System.out.println("Moved to the down");
 
         }
 
-        if (userInput.equals('d') == true) {
+        if (userInput.equals("d")) {
             Move.toTheRight(tile);
             System.out.println("Moved to the right");
         }
 
-        if (userInput.equals('w') == true) {
+        if (userInput.equals("w")) {
             Move.toTheUp(tile);
             System.out.println("Moved to the up");
         }
+    }
 
-        return tile;
+    public void showTiles (Tiles[][] tile) {
+        for (int j = 0; j <4; j++) {
+            System.out.println(" ");
+            for (int i = 0; i < 4; i++) {
+                System.out.print(tile[i][j].getValue() + " ");
+            }
+        }
     }
 }
