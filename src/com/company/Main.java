@@ -25,11 +25,11 @@ public class Main {
             //Проверяем возможность создания новой плитки
             play.checkPossibility(tile);
 
-            //Создаем случайную плитку
-            caddy.createRandomTile(tile);
-
             //Двигаем плитки в зависимости от ввода
             play.findMotion(tile);
+
+            //Создаем случайную плитку
+            caddy.createRandomTile(tile);
 
             //Выводим поле на экран
             play.showTiles(tile);
