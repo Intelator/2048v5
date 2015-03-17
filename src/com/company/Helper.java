@@ -10,8 +10,9 @@ import java.io.*;
 
 public class Helper {
     //Добавляем все пустые ячейки в список
+    ArrayList<Tiles> listOfFreeTiles = new ArrayList<Tiles>();
+
     public ArrayList countFreeTiles (Tiles[][] tile) {
-        ArrayList<Tiles> listOfFreeTiles = new ArrayList<Tiles>();
 
         int i = 0;
         int j = 0;
@@ -37,8 +38,6 @@ public class Helper {
         int j = 0;
         int r = 0;
         float p = 0;
-
-        ArrayList<Tiles> listOfFreeTiles;
 
         countFreeTiles(tile);
 

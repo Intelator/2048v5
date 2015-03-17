@@ -1,17 +1,26 @@
 package com.company;
 
 public class Main {
+    static Helper caddy = new Helper();
+    static Tiles[][] tile = new Tiles[4][4];
 
-    public void main(String[] args) {
-        Tiles[][] tile = new Tiles[4][4];
-        Helper caddy = new Helper();
-        Game play = new Game();
+    static Game play = new Game();
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                tile[i][j] = new Tiles();
+            }
+        }
 
         //Заполняем поле нулями
         play.createNewField(tile);
 
         //Начинаем игру
         while (play.getIsMovesPossible() == true) {
+            //Проверяем возможность создания новой плитки
+            play.checkPossibility(tile);
+
             //Создаем случайную плитку
             caddy.createRandomTile(tile);
 
