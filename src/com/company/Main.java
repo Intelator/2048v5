@@ -17,7 +17,7 @@ public class Main {
         play.createNewField(tile);
 
         //Начинаем игру
-        while (play.getIsMovesPossible() == true) {
+        do {
             //Проверяем возможность создания новой плитки
             play.checkPossibility(tile);
 
@@ -28,6 +28,6 @@ public class Main {
             play.findMotion(tile);
 
             //Выводим поле на экран
-        }
+        } while (play.getIsMovesPossible() == true);
     }
 }
