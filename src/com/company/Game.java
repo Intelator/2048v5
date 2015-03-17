@@ -96,25 +96,31 @@ public class Game {
 
     //Определяем движение
     public Tiles[][] findMotion (Tiles[][] tile) {
-        if ((Main.caddy.waitForUserInput().equals("a") == false) & (Main.caddy.waitForUserInput().equals("s") == false) &
-                (Main.caddy.waitForUserInput().equals("d") == false) & (Main.caddy.waitForUserInput().equals("w")) == false) {
+        String userInput = Main.caddy.waitForUserInput();
+        if ((userInput.equals('a') == false) | (userInput.equals('s') == false) |
+                (userInput.equals('d') == false) | (userInput.equals('w')) == false) {
             System.out.println("Use keys a, s, d, or w!");
         }
 
-        if (Main.caddy.waitForUserInput().equals("a") == true) {
+        if (userInput.equals('a') == true) {
             Move.toTheLeft(tile);
+            System.out.println("Moved to the left");
         }
 
-        if (Main.caddy.waitForUserInput().equals("s") == true) {
+        if (userInput.equals('s') == true) {
             Move.toTheDown(tile);
+            System.out.println("Moved to the down");
+
         }
 
-        if (Main.caddy.waitForUserInput().equals("d") == true) {
+        if (userInput.equals('d') == true) {
             Move.toTheRight(tile);
+            System.out.println("Moved to the right");
         }
 
-        if (Main.caddy.waitForUserInput().equals("s") == true) {
+        if (userInput.equals('w') == true) {
             Move.toTheUp(tile);
+            System.out.println("Moved to the up");
         }
 
         return tile;
