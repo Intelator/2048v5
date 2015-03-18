@@ -137,5 +137,27 @@ public class Game {
                 System.out.print(tile[i][j].getValue() + " ");
             }
         }
+        if (isGameFinished(tile)) {
+            setIsMovesPossible(false);
+            System.out.println("You win! Congratulations!");
+        }
+    }
+
+    //Проверка, достигли ли мы цели игры (набрать 16 очков)
+    public boolean isGameFinished (Tiles[][] tile) {
+        int i = 0;
+        int j = 0;
+        boolean isFinished = false;
+        while (i<4) {
+            while (j<4){
+                if (tile[i][j].getValue() > 15) {
+                    isFinished = true;
+                    break;
+                }
+                j++;
+            }
+            i++;
+        }
+        return isFinished;
     }
 }

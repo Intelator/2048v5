@@ -38,15 +38,17 @@ public class Helper {
         int j = 0;
         int r = 0;
         float p = 0;
+        ArrayList<Tiles> freeTiles;
 
-        countFreeTiles(tile);
 
-        r = (int) (Math.random()*listOfFreeTiles.size()+1);
+        freeTiles = countFreeTiles(tile);
+
+        r = (int) (Math.random()*freeTiles.size()+1);
         p = (float) Math.random();
         if (p<0.1) {
-            listOfFreeTiles.get(r).setValue(4);
+            freeTiles.get(r).setValue(4);
         } else {
-            listOfFreeTiles.get(r).setValue(2);
+            freeTiles.get(r).setValue(2);
         }
     }
 
